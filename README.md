@@ -1,6 +1,3 @@
-# Recommendation Systems using the Azure Machine Learning with Azure Databricks 
-##
-
 ### About this course
 In this course, you will learn to use multiple Azure AI tools and technologies to build a recommendation system for a retail scenario.  You will learn to use the AzureML Data Prep SDK with Azure Databricks to perform common data wrangling transforms and create optimized data sets for model development.  You will learn about the Automated Machine Learning capability within AzureML and use it with Azure Databricks to automatically generate multiple candidate models for a recommendation system. You will build an additional recommender model using classical techniques with Spark MLLib and perform distributed training. You will also learn to build a custom deep learning recommendation model using PyTorch.  Finally, you will learn to use the AzureML SDK from within Azure Databricks to deploy your models as Azure Kubernetes Services.
 The skills you will learn in this course can be applied to building recommendation and personalization features in other domains including news, entertainment, insurance, and communications service providers.   
