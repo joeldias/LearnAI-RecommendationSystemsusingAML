@@ -13,7 +13,7 @@ You will also build two other recommender models - one using classical technique
 You will use the Azure ML SDK in your Azure Databricks notebook to deploy the three models you have developed as Azure Kubernetes Services, each with a unique web service end point.  The consumption of these models for a retail product scenario is covered in the Designing and Implementing Customer Service Agent course. (Under development) 
 
 #### Architecture
-![Architecture](AMLArchitecture.png)
+![Architecture](RSArchitecture.png)
 
 #### Technologies Covered
 ![Technology](RSTechnologyMap.png)
