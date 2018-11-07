@@ -1,16 +1,24 @@
 ### About this course
-In this course, you will learn to use multiple Azure AI tools and technologies to build a recommendation system for a retail scenario.  You will learn to use the AzureML Data Prep SDK with Azure Databricks to perform common data wrangling transforms and create optimized data sets for model development.  You will learn about the Automated Machine Learning capability within AzureML and use it with Azure Databricks to automatically generate multiple candidate models for a recommendation system. You will build an additional recommender model using classical techniques with Spark MLLib and perform distributed training. You will also learn to build a custom deep learning recommendation model using PyTorch.  Finally, you will learn to use the AzureML SDK from within Azure Databricks to deploy your models as Azure Kubernetes Services.
-The skills you will learn in this course can be applied to building recommendation and personalization features in other domains including news, entertainment, insurance, and communications service providers.   
+In the first part of the course, you will learn to use the Azure Machine Learning Data Prep SDK with Azure Databricks to perform common data wrangling tasks and create optimized datasets for model development. In this workshop, we will use the Adventure Works retail data set to see how we can transform the dataset for building a content based recommender.
 
-#### Step 1: Prepare your Data
-The AzureML DataPrep SDK supports multiple out-of-the-box transforms (JSON expansion, derived columns, fuzzy grouping, autojoin, …) and file readers for multiple data formats.  You will work with the Adventure Works retail data set  containing the product catalog data and user purchase data stored in Azure SQL DB, and the product ratings data stored in Azure DataLake.  You will use AzureML DataPrep SDK to mount these data sets into Azure Databricks, apply transforms like auto join, fuzzy grouping, scalers and asserts, standardize keys and output a single aggregated data set optimized for training your models.  You will then use this as training data set in Azure Databricks in preparation for model development.
+In the second half, we will also use Azure Machine Learning SDK do deploy a content based recommender to Azure Container Instance (ACI). As a follow up to this, we will then deploy it to Azure Kubernetes Service (AKS) for high-scale production scenarios.
 
-#### Step 2: Build your Models 
-Automated Machine Learning  capability on Azure ML is an automated service that identifies the best machine learning pipelines for your labeled data and greatly helps with productivity saving time on trying out multiple algorithms. You will use this Automated Machine Learning capability of Azure ML in your Azure Databricks notebook to automatically generate multiple models, each using a different algorithm and a different set of features and identify the best model.
-You will also build two other recommender models - one using classical techniques with Spark MLlib and perform distributed training on Azure Databricks and other using deep learning technique with PyTorch in your Azure Databricks notebook.
+Additionally, we have also included an optional lab to build a scalable recommeder using MovieLens dataset based on collaborative filtering with Azure Databricks.   
 
-#### Step 3: Deploy your Models
-You will use the Azure ML SDK in your Azure Databricks notebook to deploy the three models you have developed as Azure Kubernetes Services, each with a unique web service end point.  The consumption of these models for a retail product scenario is covered in the Designing and Implementing Customer Service Agent course. (Under development) 
+#### Step 1: Data Preparation
+
+The goal of this session to get introduced to Azure Machine Learning Data Prep SDK. The learning objectives are:
+
+1. Learn how to use Azure Machine Learning Data Prep SDK with Databricks
+2. Read data from multiple sources (SQL DB, csv, Azure Data Lake, Excel, via mounts, etc.) and learn about Smart Read capability
+3. Learn how to use Azure Machine Learning Data Prep SDK for performing data transformations such as Auto Joins, Fuzzy Groupings, Custom Transformations, etc.
+
+#### Step 2: Deploy to ACI/AKS
+
+In this session, we will learn about deploying a simple content based recommender. Specifically, the learning objectives are:
+1. Learn how to build a simple content based recommender
+2. Learn how to use Azure Machine Learning SDK with Databricks to perform deployment of the recommender to ACI and AKS
+3. Learn how to use deep learning to build a content based recommender (optional)
 
 #### Architecture
 ![Architecture](RSArchitecture.png)
@@ -32,14 +40,12 @@ Insurance, Internet Service Providers, and Mobile/wireless companies – Recomme
 
 1.	Experience with [Python](https://www.edx.org/course/introduction-python-data-science-2#!) coding
 
-2.	Experience with [VSCode](https://code.visualstudio.com/docs/languages/python) and/or [Jupyter notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
+2.	Experience with [Jupyter notebooks](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
 
 3.	Be able to launch a [DataBricks workspace on Azure](https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal) and spin up clusters
 
 #### Pre-setup before you attend this course:
 1.	You need a Microsoft Azure account to create the services we use in our solution. You can create a [free account](https://azure.microsoft.com/en-us/free/), use your [MSDN account](https://azure.microsoft.com/en-us/pricing/member-offers/credit-for-visual-studio-subscribers/) or use any other subscription where you have permission to create services
-
-2.	Install [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) /  [VSCode](https://code.visualstudio.com/) 
 
 #### Course Details
 
@@ -57,15 +63,12 @@ Full Course class room training:  8 hours
 
 #### Course Modules
 This course is organized in following modules
-1.	Introduction to recommendation systems ~ 15 min
-2.	Recommendation System Techniques ~45 min
-3.	Data Wrangling with Azure ML DataPrep SDK and Azure Databricks ~ 2 hrs
-4.	Build multiple recommendation models using automated Machine Learning capability in Azure ML, classical model using Spark MLLib and  deep learning models using PyTorch ~ 4 hrs
-5.	Deploy trained models to AKS ~ 30 min
-6.	Discuss Learnings ~ 30 min
-
-#### Other Resource
-[Microsoft Automated Machine Learning capability with Azure ML](https://azure.microsoft.com/en-us/blog/announcing-automated-ml-capability-in-azure-machine-learning/)
+1. Introduction to recommendation systems ~ 30 min
+2. Install and Configuration ~ 30 mins
+3. Data Preparation with Azure ML DataPrep SDK and Azure Databricks ~ 3 hrs
+4. Deploy Content based Recommender to ACI ~ 2 hrs
+5. Deploy Content based Recommender to AKS ~ 1 hr
+6. Discuss Learnings ~ 30 min
 
 # Contributing
 
